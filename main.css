@@ -58,17 +58,17 @@ img {
 /*-------------------------------------------------
  # Story
 -------------------------------------------------*/
-.story {
+#story {
 	background: linear-gradient(var(--pink), var(--pink-dark));
 }
-.story .container {
+#story .container {
 	display: flex;
 }
 .card {
 	width: 25%;
 	padding: 12px;
 }
-.story p {
+#story p {
     color: white;
     font-size: 1em;
     line-height: 1.7em;
@@ -135,10 +135,10 @@ img {
 }
 @media screen and (max-width: 750px) {
     /* Story - header */
-    .story .container {
+    #story .container {
         flex-wrap: wrap;
     }
-    .story .card {
+    #story .card {
         width: 50%;
         padding: 30px;
     }
@@ -161,5 +161,6 @@ img {
 @media screen and (max-width: 425px) {
     #story .card {
         width: 100%;
+        padding: 0;
     }
 }
