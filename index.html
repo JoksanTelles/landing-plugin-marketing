@@ -1,15 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-MX">
 <head>
+    <!-- Configuración general SEO -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="main.css">
+    <title>Plug In Marketing</title>
+    <meta name="author" content="Plug In Marketing">
+    <meta name="description" content="Somos una Agencia de Marketing especializada en atraer clientes">
+
+    <!-- Compatibilidad y responsive design -->
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="true">
+    <link rel="shortcut icon" type="image/png" href="./img/favicon.png">
+    <link rel="stylesheet" href="./main.css">
+
+    
+    <!-- Invalidación de memoria caché-->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Last-Modified" content="0">
+    <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
+    <meta http-equiv="Pragma" content="no-chache">
+
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
 </head>
 <body>
-	<div id="story" class="section">
+
+    <!-- Video demo -->
+    <section id="video-demo">
+        <button onclick="closeVideo()">
+            <p>x</p>
+        </button>
+        <iframe src="catalogo.mp4" frameborder="0"></iframe>
+    </section>
+
+	<section id="story" class="section">
 		<div class="container">
 			<div class="card">
                 <img src="img/ilustracion-1.svg" alt="Ana revisa Facebook">
@@ -27,10 +53,28 @@
                 <img src="img/ilustracion-4.svg" alt="">
                 <p>Ana lo compra justo a tiempo para salvar su amistad.</p>
             </div>
-		</div>
-	</div>
+        </div>
 
-	<div id="why-facebook" class="section">
+        <!-- Show the video -->
+        <button class="video" onclick="openVideo()">
+            <div class="play-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 148 148">
+                <defs><style>.play{fill: white;}</style></defs>
+                <title>Play video</title>
+                <path class="play" d="M110.44,71.37l-54-29.63A3,3,0,0,0,52,44.37v59.27a3,3,0,0,0,4.44,2.63l54-29.63a3,3,0,0,0,0-5.26ZM58,98.57V49.43L102.76,74Z"/>
+                <path class="play" d="M74,0a74,74,0,1,0,74,74A74.08,74.08,0,0,0,74,0Zm0,142a68,68,0,1,1,68-68A68.08,68.08,0,0,1,74,142Z"/>
+                </svg>
+            </div>
+            Mira el video de ejemplo
+        </button>
+
+        <!-- Circles-->
+        <div class="circle one"></div>
+        <div class="circle two"></div>
+        <div class="circle three"></div>
+    </section>
+
+	<section id="why-facebook" class="section">
 		<div class="container">
             <!-- Primera parte -->
             <div class="part-one">
@@ -45,9 +89,9 @@
                 <img src="img/ilustracion-5.svg" alt="">
             </div>
 		</div>
-	</div>
+	</section>
 
-	<div id="shop-functions" class="section">
+	<section id="shop-functions" class="section">
 		<div class="container">
             <!-- Primera parte -->
             <div class="part-one">
@@ -59,11 +103,24 @@
                 <img src="img/ilustracion-6.svg" alt="">
             </div>
 		</div>
-    </div>
+    </section>
+
+    <!-- Contact | CTA -->
     <section id="contact" class="section">
 			<h2>¿Ya vendes productos en internet o quieres empezar a venderlos? ¿Tu negocio tiene presencia en Facebook?</h2>
             <p>Si respondiste ¡SI! a cualquiera de estas preguntas, es hora de que veas cómo podrías aumentar tus ventas.</p>
 			<div><button><a href="tel:000-000-0000">Llámanos</a></button></div>
     </section>
+
+    <script>
+        function openVideo() {
+        var element = document.getElementById("video-demo");
+        element.classList.add("show-me");
+        }
+        function closeVideo() {
+            var element = document.getElementById("video-demo");
+            element.classList.remove("show-me");
+        }
+    </script>
 </body>
 </html>
