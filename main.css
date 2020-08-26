@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --yellow: #fde803;
+    --pink: #fd0d51;
+    --pink-dark: #c61b63;
+    --light-gray: #f2f2f2;
+    --dark: #1a1a1a;
+    --light-blue: #bdccd4;
+}
+::selection {
+    background: var(--yellow);
+}
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+h1, h2, h3, p {
+    margin-bottom: 1rem;
+    color: var(--dark);
+}
+h2 { font-size: 1.5em; line-height: 1.5em;}
+p { font-size: 1.25em; line-height: 1.4em;}
+
+button {
+	padding: 10px 20px;
+	border-radius: 50px;
+    border: 0;
+    background: var(--yellow);
+}
+button a {
+    font-size: 1.2em;
+    color: var(--dark);
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+}
+img {
+	width: 100%;
+}
+/*-------------------------------------------------
+ # Predeterminado
+-------------------------------------------------*/
+.section {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
+.container {
+	max-width: 1100px;
+	width: 100%;
+	padding: 100px 50px;
+}
+.container:first-child {
+    padding: 150px 50px 100px;
+}
+/*-------------------------------------------------
+ # Story
+-------------------------------------------------*/
+.story {
+	background: linear-gradient(var(--pink), var(--pink-dark));
+}
+.story .container {
+	display: flex;
+}
+.card {
+	width: 25%;
+	padding: 12px;
+}
+.story p {
+    color: white;
+    font-size: 1em;
+    line-height: 1.7em;
+}
+/*-------------------------------------------------
+ # Why Facebook
+-------------------------------------------------*/
+#why-facebook {
+    background: var(--light-gray);
+}
+#why-facebook .container {
+    display: flex;
+}
+.part-one, .part-two {
+    width: 50%;
+}
+#why-facebook .part-one {
+    padding-right: 8%;
+}
+/*-------------------------------------------------
+ # Shop functions
+-------------------------------------------------*/
+#shop-functions {
+    background: var(--light-blue);
+}
+#shop-functions .container {
+    display: flex;
+    flex-direction: row-reverse;
+}
+#shop-functions .part-one {
+    padding-left: 8%;
+}
+/*-------------------------------------------------
+ # Contact
+-------------------------------------------------*/
+#contact {
+    background: black;
+    flex-direction: column;
+    text-align: center;
+    padding: 100px 50px;
+}
+#contact h2 {
+    max-width: 800px;
+}
+#contact p {
+    max-width: 600px;
+}
+#contact p,
+#contact h2 {
+    color: white;
+    margin: 0 auto;
+    margin-bottom: 1em;
+}
+#contact h2 {
+    font-size: 1.8em;
+}
+/*-------------------------------------------------
+ # Contact
+-------------------------------------------------*/
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 750px) {
+    /* Story - header */
+    .story .container {
+        flex-wrap: wrap;
+    }
+    .story .card {
+        width: 50%;
+        padding: 30px;
+    }
+    /* Why facebook */
+    #why-facebook .container {
+        flex-direction: column;
+    }
+    #why-facebook .part-one,
+    #shop-functions .part-one {
+        padding: 0;
+    }
+    .part-one, .part-two {
+        width: 100%;
+    }
+    /* Shop functions*/
+    #shop-functions .container {
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 425px) {
+    #story .card {
+        width: 100%;
+    }
+}
