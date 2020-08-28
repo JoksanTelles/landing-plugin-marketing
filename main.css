@@ -67,6 +67,10 @@ img {
     justify-content: center;
     align-items: center;
 }
+#story .logo {
+    margin-top: 80px;
+    max-width: 250px;
+}
 #story .container {
     display: flex;
     padding-bottom: 20px;
