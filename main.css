@@ -226,6 +226,9 @@ iframe {
     body {
         font-size: 14px;
     }
+    #story p {
+        font-size: 16px;
+    }
     /* Story - header */
     .circle.one {
         width: 500px;
@@ -287,8 +290,9 @@ iframe {
 }
 @media screen and (max-width: 425px) {
     /* Predeterminado */
-    .container:first-child {
-        padding: 80px 50px;
+    .container:first-child,
+    #contact, .container {
+        padding: 80px 40px;
     }
     /* Story */
     #story .card {
@@ -308,5 +312,11 @@ iframe {
     /* Contact */
     #contact {
         text-align: left;
+    }
+}
+@media screen and (max-width: 380px) {
+    .container:first-child,
+    #contact, .container {
+        padding: 50px 30px;
     }
 }
